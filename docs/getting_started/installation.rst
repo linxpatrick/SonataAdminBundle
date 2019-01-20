@@ -1,5 +1,6 @@
 Installation
 ============
+The SonataAdminBundle provides a dashboard with a top bar and navigation pane that has a search function. Refer to the last screenshot in this article for an image of the base dashboard.
 
 SonataAdminBundle is just a bundle and as such, you can install it at any
 moment during a project's lifecycle.
@@ -54,7 +55,7 @@ Configure the Installed Bundles
 Now all needed bundles are downloaded and registered, you have to add some
 configuration. The admin interface is using SonataBlockBundle to put everything
 in blocks. You just have to tell the block bundle about the existence of the
-admin block:
+admin block by adding this file:
 
 .. configuration-block::
 
@@ -77,7 +78,7 @@ admin block:
 Enable the "translator" service
 -------------------------------
 
-The translator service is required by SonataAdmin to display all labels properly.
+The translator service is required by SonataAdmin to display all labels properly. Add the translator section to the framework section in config/packages/framework.yaml.
 For more information: http://symfony.com/doc/current/translation.html#configuration
 
 .. configuration-block::
@@ -93,7 +94,7 @@ Define routes
 
 The bundles are now registered and configured correctly. To be able to access SonataAdminBundle's pages,
 the Symfony router needs to know the routes provided by the SonataAdminBundle.
-You can do this by adding its routes to your application's routing file:
+You can do this by adding its routes to your application's routing files in the config/routes directory. The application's routing file is :
 
 .. configuration-block::
 
@@ -124,7 +125,7 @@ You can do this by adding its routes to your application's routing file:
     this route and it simply ignores the resource setting.
 
 At this point you can already access the (empty) admin dashboard by visiting the URL:
-``http://yoursite.local/admin/dashboard``.
+``http://yoursite.local/admin/dashboard``. It may not appear as it's supposed to until you perform the following steps.
 
 Preparing your Environment
 --------------------------
