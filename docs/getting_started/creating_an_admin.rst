@@ -160,6 +160,7 @@ service and tag it with the ``sonata.admin`` tag:
 
         # config/services.yaml
 
+        # Don't change this once it's created or an error will occur that cannot be fixed.
         services:
             # ...
             admin.category:
