@@ -16,6 +16,8 @@ For the rest of the tutorial, you'll need some sort of model. In this tutorial,
     // ...
     class BlogPost
     {
+        namespace App\Entity
+        
         // ...
 
         /**
@@ -48,6 +50,8 @@ For the rest of the tutorial, you'll need some sort of model. In this tutorial,
 .. code-block:: php
 
     // src/Entity/Category.php
+    
+    namespace App\Entity
 
     use Doctrine\Common\Collections\ArrayCollection;
 
